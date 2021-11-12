@@ -1,0 +1,40 @@
+{
+  "parser": "@typescript-eslint/parser", // [@typescript-eslint/parser] ?
+  "parserOptions": {
+    "project": ["tsconfig.json"]
+  },
+  "plugins": [
+    "@typescript-eslint", // [@typescript-eslint] ?
+    "react", // [eslint-plugin-react] ?
+    "jsx-a11y", // [eslint-jsx-a11y] ?
+    "prettier" // [eslint-plugin-prettier] registers plugin that enables prettier through eslint
+  ],
+  "extends": [
+    "eslint:recommended", 
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier" // [eslint-config-prettier] disable eslint rules that conflict with prettier
+  ],
+  "rules": {
+    "prettier/prettier": ["error", { // [eslint-plugin-prettier] run prettier from within eslint
+      "semi": false // [custom] no semicolons
+    }], 
+    "arrow-body-style": "off", // should not be used together with prettier/prettier
+    "prefer-arrow-callback": "off" // should not be used together with prettier/prettier
+  },
+  "env": {
+    "node": true, // allow node globals (gatsby === node)
+    "browser": true // allow browser globals (built === for the browser)
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "ignorePatterns": [ // ignore all NodeJS files
+    "gatsby-config.js",
+    "gatsby-browser.js",
+    "postcss.config.js",
+    "tailwind.config.js"
+  ]
+}
