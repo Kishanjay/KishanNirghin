@@ -4,9 +4,18 @@ import Helmet from "react-helmet"
 export default () => {
   return (
     <>
-      <Helmet>
+      <Helmet
+        htmlAttributes={{
+          lang: "en",
+        }}
+      >
         <meta charSet="utf-8" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <title>Introduction to Kishan Nirghin</title>
+        <meta
+          name="description"
+          content="This website will introduce you to Kishan Nirghin as a professional."
+        />
       </Helmet>
       <div
         className="bg-white-black min-h-screen min-v-screen"
@@ -35,6 +44,7 @@ export default () => {
                   className="border-2 border-black p-2 rounded-full"
                   href="https://www.linkedin.com/in/kishan-nirghin/"
                   target="_blank"
+                  rel="noopener"
                 >
                   <img
                     src="/images/linkedin.svg"
@@ -48,6 +58,7 @@ export default () => {
                   className="ml-2 border-2 border-black p-2 rounded-full"
                   href="https://www.github.com/kishanjay"
                   target="_blank"
+                  rel="noopener"
                 >
                   <img
                     src="/images/github.svg"
@@ -61,6 +72,7 @@ export default () => {
                   className="ml-2 border-2 border-black p-2 rounded-full"
                   href="https://www.twitter.com/kishannirghin"
                   target="_blank"
+                  rel="noopener"
                 >
                   <img
                     src="/images/twitter.svg"
